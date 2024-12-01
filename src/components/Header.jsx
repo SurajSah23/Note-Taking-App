@@ -16,7 +16,7 @@ export const Header = () => {
       <div className="container">
         <h1 className="title">Noteworthy</h1>
         <Button onClick={handleDarkModeToggle} aria-label="Toggle dark mode">
-          {darkMode ? <Sun className="icon" /> : <Moon className="icon" />}
+          {darkMode ? <Sun className="headericon" /> : <Moon className="headericon" />}
         </Button>
       </div>
     </header>

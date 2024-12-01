@@ -1,4 +1,3 @@
-/* Global styles for dark mode */
 body.dark {
     background-color: #333;
     color: #fff;
@@ -7,12 +6,17 @@ body.dark {
 .header {
     background-color: #fff;
     color: #333;
-    padding: -50rem 2rem;
+    padding: 1rem 2rem;
+    height: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header.dark {
@@ -20,25 +24,56 @@ body.dark {
     color: #fff;
 }
 
-button {
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.dark-mode-toggle {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    font-size: 1.25rem;
-    transition: transform 0.2s ease;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-button:hover {
+.dark-mode-toggle:hover {
     transform: scale(1.1);
+    color: #ffcc00;
 }
 
-.icon {
+.headericon {
     width: 1.5rem;
     height: 1.5rem;
     color: inherit;
 }
 
-.header.dark button {
+.header.dark .dark-mode-toggle {
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+        height: 60px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .dark-mode-toggle {
+        font-size: 1.25rem;
+    }
 }
