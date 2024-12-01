@@ -1,7 +1,13 @@
+/* Global styles for dark mode */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
 .header {
     background-color: #fff;
     color: #333;
-    padding: 1rem 2rem;
+    padding: -50rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,20 +18,6 @@
 .header.dark {
     background-color: #333;
     color: #fff;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    margin-right: 2rem;
 }
 
 button {
