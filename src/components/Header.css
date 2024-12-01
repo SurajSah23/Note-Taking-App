@@ -57,6 +57,7 @@ body.dark {
     width: 1.5rem;
     height: 1.5rem;
     color: inherit;
+    margin-right: 50px; 
 }
 
 .header.dark .dark-mode-toggle {
