@@ -1,31 +1,30 @@
-import PropTypes from 'prop-types';
-import { Trash2, Edit3, Check } from 'lucide-react';
-import { Button } from '../ui/Button';
-import './NoteActions.css';
+import PropTypes from "prop-types";
+import { Trash2, Edit3, Check } from "lucide-react";
+import { Button } from "../ui/Button";
 
 export const NoteActions = ({ isEditing, onEdit, onSave, onDelete }) => {
   return (
-    <div className="note-actions">
+    <div className="flex space-x-2">
       {isEditing ? (
         <Button
           onClick={onSave}
-          className="note-actions-button save"
+          className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
         >
-          <Check className="icon" />
+          <Check className="w-5 h-5" />
         </Button>
       ) : (
         <Button
           onClick={onEdit}
-          className="note-actions-button edit"
+          className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors"
         >
-          <Edit3 className="icon" />
+          <Edit3 className="w-5 h-5" />
         </Button>
       )}
       <Button
         onClick={onDelete}
-        className="note-actions-button delete"
+        className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors"
       >
-        <Trash2 className="icon" />
+        <Trash2 className="w-5 h-5" />
       </Button>
     </div>
   );

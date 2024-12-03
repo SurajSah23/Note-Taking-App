@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useNoteStore } from '../../store/useNoteStore';
 import { NoteEditor } from './NoteEditor';
 import { NoteActions } from './NoteActions';
-import './NoteCard.css'; 
 
 export const NoteCard = ({ note }) => {
   const { updateNote, deleteNote } = useNoteStore();
@@ -23,8 +22,11 @@ export const NoteCard = ({ note }) => {
   };
 
   return (
-    <div className="note-card" style={{ backgroundColor: note.color + '20' }}>
-      <div className="note-card-content">
+    <div
+      className="rounded-lg shadow-md p-4 mb-4"
+      style={{ backgroundColor: `${note.color}20` }}
+    >
+      <div className="mb-4">
         {isEditing ? (
           <NoteEditor
             title={title}
@@ -34,8 +36,8 @@ export const NoteCard = ({ note }) => {
           />
         ) : (
           <>
-            <h3 className="note-title">{note.title}</h3>
-            <p className="note-content">{note.content}</p>
+            <h3 className="text-xl font-bold mb-2 text-gray-800">{note.title}</h3>
+            <p className="text-gray-600">{note.content}</p>
           </>
         )}
       </div>

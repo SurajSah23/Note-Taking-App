@@ -4,7 +4,7 @@ export const Button = ({ children, onClick, className, ...props }) => {
   return (
     <button
       onClick={onClick}
-      className={`rounded-lg transition-all duration-300 ${className}`}
+      className={`rounded-lg px-4 py-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
       {...props}
     >
       {children}
